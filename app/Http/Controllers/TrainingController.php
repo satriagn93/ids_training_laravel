@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Training;
-use Illuminate\Support\Facades\DB;
 
 class TrainingController extends Controller
 {
@@ -12,7 +11,7 @@ class TrainingController extends Controller
     {
         //melakukan insert data 
         $members              = new Training;
-        $members->pengajar    = $request->name;
+        $members->pengajar    = $request->pengajar;
         $members->tema        = $request->tema;
 
         //jika berhasil maka simpan data dengan methode $post->save()
