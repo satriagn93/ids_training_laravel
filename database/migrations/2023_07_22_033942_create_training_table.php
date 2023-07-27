@@ -17,7 +17,6 @@ return new class extends Migration
             $table->bigIncrements('id');
             $table->string('pengajar');
             $table->string('tema');
-            $table->date('updated_date');
             $table->timestamps();
         });
     }

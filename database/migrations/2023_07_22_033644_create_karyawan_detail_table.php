@@ -17,7 +17,6 @@ return new class extends Migration
             $table->bigIncrements('id');
             $table->string('nik');
             $table->string('npwp');
-            $table->date('updated_date');
             $table->timestamps();
         });
     }

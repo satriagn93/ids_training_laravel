@@ -20,7 +20,6 @@ return new class extends Migration
             $table->string('name');
             $table->string('status');
             $table->integer('karyawan_detail_id');
-            $table->date('updated_date');
             $table->timestamps();
         });
     }
