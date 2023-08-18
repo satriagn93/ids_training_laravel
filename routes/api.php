@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TrainingController;
 use App\Http\Controllers\KaryawanController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\ExternalController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,6 +28,10 @@ Route::middleware('auth:sanctum')->get('/training/getTraining', [TrainingControl
 Route::middleware('auth:sanctum')->get('/training/getTrainingById/{id}', [TrainingController::class, 'getTrainingById']);
 Route::middleware('auth:sanctum')->post('/training/update/{id}', [TrainingController::class, 'update']);
 Route::middleware('auth:sanctum')->delete('/training/deleteById/{id}', [TrainingController::class, 'destroy']);
+Route::middleware('auth:sanctum')->get('/training/getTrainingPagination', [TrainingController::class, 'getTrainingPagination']);
+
+
+Route::get('/training/province', [ExternalController::class, 'provinceExternal']);
 
 // rent book
 Route::middleware('auth:sanctum')->post('/karyawan/store', [KaryawanController::class, 'store']);
